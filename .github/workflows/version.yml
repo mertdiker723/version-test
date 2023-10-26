@@ -21,8 +21,8 @@ jobs:
           git config --global user.email 'mertdiker723@gmail.com'
           echo "Git status"
           git status
-          echo "Git checkout master"
-          git checkout -m master
+          echo "Git checkout main"
+          git checkout -m main
           echo "Git commit"
           git commit -am "Update FE version"
           echo "Git push"
