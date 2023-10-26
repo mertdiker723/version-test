@@ -1,0 +1,29 @@
+# This workflow adds the version for the branch
+
+name: SetFrontendVersion
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  set-version:
+    name: Set version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set current version
+        run: |
+          ./set-version.sh
+      - name: Push changes
+        run: |
+          git config --global user.name 'mertdikler723'
+          git config --global user.email 'mertdiker723@gmail.com'
+          echo "Git status"
+          git status
+          echo "Git checkout master"
+          git checkout -m master
+          echo "Git commit"
+          git commit -am "Update FE version"
+          echo "Git push"
+          git push
