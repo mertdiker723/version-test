@@ -17,7 +17,7 @@ jobs:
           ./set-version.sh
       - name: Push changes
         run: |
-          git config --global user.name 'mertdikler723'
+          git config --global user.name 'Mert Diker'
           git config --global user.email 'mertdiker723@gmail.com'
           echo "Git status"
           git status
